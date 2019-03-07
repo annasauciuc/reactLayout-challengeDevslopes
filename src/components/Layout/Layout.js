@@ -34,7 +34,7 @@ class Layout extends Component {
       city,
       likes
     } = this.state;
-
+console.log('followers', followers)
     return (
       <React.Fragment>
         <div className="container">

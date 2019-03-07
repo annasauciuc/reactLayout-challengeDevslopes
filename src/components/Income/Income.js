@@ -2,12 +2,9 @@ import React, { Component } from "react";
 
 class Income extends Component {
   render() {
-    const income = {
-      number: 20,
-      text: "New Income added to this month"
-    };
+ 
 
-    const { number } = this.income;
+    const { number } = this.props;
 
     return (
       <React.Fragment>

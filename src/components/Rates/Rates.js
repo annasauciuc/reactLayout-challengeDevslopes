@@ -3,8 +3,8 @@ import React, { Component } from "react";
 class Rates extends Component {
   render() {
  
-console.log('this.rates :', this.rates);
-    const { number, text } = this.rates;
+
+    const { number, text } = this.props;
 
     return (
       <React.Fragment>
