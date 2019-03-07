@@ -7,14 +7,14 @@ class Income extends Component {
       text: "New Income added to this month"
     };
 
-    const { number, text } = income;
+    const { number } = this.income;
 
     return (
       <React.Fragment>
         <div className="card" style={{ width: "18rem" }}>
           <div className="card-body">
             <h5 className="card-title">{number}</h5>
-            <p className="card-text">{text}</p>
+            <p className="card-text">{number}</p>
           </div>
         </div>
       </React.Fragment>

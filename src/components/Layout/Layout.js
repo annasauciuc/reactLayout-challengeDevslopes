@@ -24,18 +24,14 @@ class Layout extends Component {
   }
 
   render() {
-      console.log('this.state', this.state)
+    console.log("this.state", this.state);
     const {
-      numberFol,
-      textFol,
+      followers,
+      rates,
       income,
-      textIncome,
       views,
       comments,
-      grades,
       city,
-      textRate,
-      percetage,
       likes
     } = this.state;
 
@@ -43,13 +39,13 @@ class Layout extends Component {
       <React.Fragment>
         <div className="container">
           <div className="col-md-9" style={{ width: "18rem" }}>
-            <Followers numberFol={numberFol} textFol={textFol} />
-            <Income income={income} textIncome={textIncome} />
+            <Followers followers={followers}  />
+            <Income income={income}  />
             <Photos views={views} likes={likes} comments={comments} />
           </div>
           <div className="col-md-3 d-flex-row" style={{ width: "18rem" }}>
-            <City grades={grades} city={city} />
-            <Rates textRate={textRate} percetage={percetage} />
+            <City city={city}  />
+            <Rates rates={rates} rates={rates} />
           </div>
         </div>
       </React.Fragment>
