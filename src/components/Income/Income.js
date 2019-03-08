@@ -13,8 +13,8 @@ class Income extends Component {
           <Followers followers={followers} />
           {income.map((inc, i) => {
             return (
-              <div className="  col-xs-12 col-sm-6 col-md-4">
-                <div className="card-body  bg-white rounded border">
+              <div className=" col-xs-12 col-sm-6 col-md-4">
+                <div className="card-body  mt-2  bg-white rounded border">
                   <h5 className="card-title">
                     <strong> $ {inc}</strong>{" "}
                   </h5>

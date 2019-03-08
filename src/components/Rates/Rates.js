@@ -10,7 +10,7 @@ class Rates extends Component {
           return (
             <div className=" mt-3 rounded border  ">
               <div
-                className=" pt-2  col-md-12 text-white"
+                className=" pt-3 pb-3  col-md-12 text-white"
                 style={{ backgroundColor: "#0096D0" }}
               >
                 <small className="card-text">{rate}</small>

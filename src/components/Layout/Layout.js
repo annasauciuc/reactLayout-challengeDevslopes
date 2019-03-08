@@ -15,7 +15,7 @@ class Layout extends Component {
       views: [15080, 15800],
       likes: [12000, 12000],
       comments: [5100, 5100],
-      city: "18ª",
+      city: "18º",
       rates: {
         title: ["New Visitors","Bounce Rate", "Searches",  "Traffic",],
         procent: ["1.5K", "50%", "28%", "140.5 kb"]
@@ -37,7 +37,7 @@ class Layout extends Component {
 
     return (
       <React.Fragment>
-        <div className="container mt-5">
+        <div className="container mt-5 mb-5">
           <div className="row ">
             <div className="col-md-9    mt-3">
               <Income income={income} />

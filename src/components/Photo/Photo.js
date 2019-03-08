@@ -11,8 +11,8 @@ class Photo extends Component {
       <React.Fragment>
         {views.map((view, i) => {
           return (
-            <div className=" mt-3 rounded  photo-container">
-              <div className="  photo ">
+            <div className=" mt-3   photo-container">
+              <div className=" rounded photo ">
                 <div className="card-body main-card">
                   <h5 className="card-title" />
                   <p className="card-text" />
