@@ -1,9 +1,9 @@
-.photo {
-    background-color: #0096D0;
+.photo-container {
+    border-radius: 8px!important;
 }
 
-.photo-container {
-    border-radius: 0.25rem !important;
+.photo {
+    background-color: #0096D0;
 }
 
 .card-f {
@@ -17,5 +17,4 @@
 
 .main-card {
     height: 200px;
-    border-radius: 8px
 }

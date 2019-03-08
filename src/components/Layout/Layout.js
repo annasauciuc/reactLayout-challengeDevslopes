@@ -19,7 +19,6 @@ class Layout extends Component {
         photoColor: ["#0096D0", "#CD59AE"]
       },
 
-      city: "18º",
       rates: {
         title: ["New Visitors", "Bounce Rate", "Searches", "Traffic"],
         procent: ["1.5K", "50%", "28%", "140.5 kb"],
@@ -30,30 +29,19 @@ class Layout extends Component {
 
   render() {
     console.log("this.state", this.state);
-    const {
-      backgroundColor,
-
-      photos,
-      followers,
-      rates,
-      income,
-      photoColor,
-      comments,
-      city,
-      likes
-    } = this.state;
+    const { photos, rates, income, followers } = this.state;
 
     return (
       <React.Fragment>
-        <div className="container  mb-5">
+        <div className="container mt-5">
           <div className="row">
-            <div className="col-md-9  col-xs-12 col-sm-6    mt-3">
-              <Income income={income} />
-              <Photos photos={photos} photoColor={photoColor} />
+            <div className="col-md-9  col-xs-12 col-sm-12 mt-3">
+              <Income income={income} followers={followers} />
+              <Photos photos={photos} />
             </div>
-            <div className="col-md-3  col-xs-12 col-sm-6  mt-3 d-flex-row">
-              <City city={city} />
-              <Rates rates={rates} backgroundColor={backgroundColor} />
+            <div className="col-md-3 col-xs-12 col-sm-12 mb-5 mt-3 ">
+              <City />
+              <Rates rates={rates} />
             </div>
           </div>
         </div>

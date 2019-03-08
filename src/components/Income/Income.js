@@ -3,7 +3,9 @@ import Followers from "../Folowers/Followers";
 class Income extends Component {
   render() {
     const { income, followers } = this.props;
-    console.log("number :", followers);
+    console.log("this.props", this.props);
+    console.log("followers :", followers);
+    console.log("income", income);
 
     return (
       <React.Fragment>
@@ -13,7 +15,7 @@ class Income extends Component {
           <Followers followers={followers} />
           {income.map((inc, i) => {
             return (
-              <div className=" col-xs-12 col-sm-6 col-md-4">
+              <div key={"income" + i} className=" col-xs-12 col-sm-12 col-md-4">
                 <div className="card-body  mt-2  bg-white rounded border">
                   <h5 className="card-title">
                     <strong> $ {inc}</strong>{" "}
@@ -24,7 +26,7 @@ class Income extends Component {
             );
           })}
           {/* </div> */}
-          </div>
+        </div>
       </React.Fragment>
     );
   }
