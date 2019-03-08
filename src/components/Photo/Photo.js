@@ -8,9 +8,9 @@ class Photo extends Component {
       <React.Fragment>
         {photos.views.map((view, i) => {
           return (
-            <div key={"photo" + i} className=" mt-3    photo-container">
+            <div key={"photo" + i} className=" mt-4 rounded    photo-container">
               <div
-                className="photo "
+                className="photo rounded mb-2 "
                 style={{ backgroundColor: photos.photoColor[i] }}
               >
                 <div className="col-md-12  main-card">
@@ -18,7 +18,7 @@ class Photo extends Component {
                   <p className="card-text" />
                 </div>
 
-                <div className="col-md-12 d-flex  justify-content-around py-2   card-f ">
+                <div className="col-md-12 d-flex rounded-bottom justify-content-around py-2   card-f ">
                   <div className=" text-center">
                     <h4>{photos.views[i]}</h4>
                     <span>Shot views</span>

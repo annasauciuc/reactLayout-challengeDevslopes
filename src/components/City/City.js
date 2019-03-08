@@ -31,10 +31,10 @@ class City extends Component {
       <React.Fragment>
         <div
           className="card  mt-2 city-card text-center text-white"
-          style={{ backgroundColor: "#FF8A00", height: "130px" }}
+          style={{ backgroundColor: "#FF8A00", height: "126px" }}
         >
           <div className="card-body">
-            <h2 className="card-title">{`${Math.floor(temp)}º`}</h2>
+            <h2 className="card-title"><strong>{`${Math.floor(temp)}º`}</strong></h2>
             <small className="card-text">{city.title}</small>
           </div>
         </div>
