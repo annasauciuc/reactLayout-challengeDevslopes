@@ -12,13 +12,18 @@ class Layout extends Component {
     this.state = {
       followers: 20,
       income: [1250, 13865],
-      views: [15080, 15800],
-      likes: [12000, 12000],
-      comments: [5100, 5100],
+      photos: {
+        views: [15080, 15800],
+        likes: [12000, 12000],
+        comments: [5100, 5100],
+        photoColor: ["#0096D0", "#CD59AE"]
+      },
+
       city: "18º",
       rates: {
-        title: ["New Visitors","Bounce Rate", "Searches",  "Traffic",],
-        procent: ["1.5K", "50%", "28%", "140.5 kb"]
+        title: ["New Visitors", "Bounce Rate", "Searches", "Traffic"],
+        procent: ["1.5K", "50%", "28%", "140.5 kb"],
+        backgroundColor: ["#0096D0", "#B28AD6", "#FF4826", "#63C254"]
       }
     };
   }
@@ -26,10 +31,13 @@ class Layout extends Component {
   render() {
     console.log("this.state", this.state);
     const {
+      backgroundColor,
+
+      photos,
       followers,
       rates,
       income,
-      views,
+      photoColor,
       comments,
       city,
       likes
@@ -37,15 +45,15 @@ class Layout extends Component {
 
     return (
       <React.Fragment>
-        <div className="container mt-5 mb-5">
-          <div className="row ">
-            <div className="col-md-9    mt-3">
+        <div className="container  mb-5">
+          <div className="row">
+            <div className="col-md-9  col-xs-12 col-sm-6    mt-3">
               <Income income={income} />
-              <Photos views={views} likes={likes} comments={comments} />
+              <Photos photos={photos} photoColor={photoColor} />
             </div>
-            <div className="col-md-3 mt-3 d-flex-row">
+            <div className="col-md-3  col-xs-12 col-sm-6  mt-3 d-flex-row">
               <City city={city} />
-              <Rates rates={rates} />
+              <Rates rates={rates} backgroundColor={backgroundColor} />
             </div>
           </div>
         </div>

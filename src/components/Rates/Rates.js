@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./Rate.css";
 class Rates extends Component {
   render() {
-    const { rates } = this.props;
+    const { rates, backgroundColor } = this.props;
+    console.log('backgroundColor', backgroundColor)
 
     return (
       <React.Fragment>
@@ -11,7 +12,7 @@ class Rates extends Component {
             <div className=" mt-3 rounded border  ">
               <div
                 className=" pt-3 pb-3  col-md-12 text-white"
-                style={{ backgroundColor: "#0096D0" }}
+                style={{ backgroundColor: rates.backgroundColor[i] }}
               >
                 <small className="card-text">{rate}</small>
                 <h5 className="">{rates.procent[i]} </h5>
