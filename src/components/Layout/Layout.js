@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import Followers from "../Folowers/Followers";
 import Income from "./../Income/Income";
 import Photos from "./../Photo/Photo";
 import City from "./../City/City";
 import Rates from "./../Rates/Rates";
+import "./Layout.css";
 
 class Layout extends Component {
   constructor() {
@@ -17,8 +17,8 @@ class Layout extends Component {
       comments: [5100, 5100],
       city: "18ª",
       rates: {
-        title: ["Traffic", "Searches", "Bounce Rate", "New Visitors"],
-        rates: ["1.5K", "50%", "28%", "140.5 kb"]
+        title: ["New Visitors","Bounce Rate", "Searches",  "Traffic",],
+        procent: ["1.5K", "50%", "28%", "140.5 kb"]
       }
     };
   }
@@ -34,18 +34,19 @@ class Layout extends Component {
       city,
       likes
     } = this.state;
-console.log('followers', followers)
+
     return (
       <React.Fragment>
-        <div className="container">
-          <div className="col-md-9" style={{ width: "18rem" }}>
-            <Followers followers={followers}  />
-            <Income income={income}  />
-            <Photos views={views} likes={likes} comments={comments} />
-          </div>
-          <div className="col-md-3 d-flex-row" style={{ width: "18rem" }}>
-            <City city={city}  />
-            <Rates rates={rates} rates={rates} />
+        <div className="container mt-5">
+          <div className="row ">
+            <div className="col-md-9    mt-3">
+              <Income income={income} />
+              <Photos views={views} likes={likes} comments={comments} />
+            </div>
+            <div className="col-md-3 mt-3 d-flex-row">
+              <City city={city} />
+              <Rates rates={rates} />
+            </div>
           </div>
         </div>
       </React.Fragment>

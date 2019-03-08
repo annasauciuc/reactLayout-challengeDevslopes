@@ -1,19 +1,25 @@
 import React, { Component } from "react";
-
+import "./Rate.css";
 class Rates extends Component {
   render() {
- 
-
-    const { number, text } = this.props;
+    const { rates } = this.props;
 
     return (
       <React.Fragment>
-        <div className="card" style={{ width: "18rem" }}>
-          <div className="card-body">
-            <h5 className="card-title">{number}</h5>
-            <p className="card-text">{text}</p>
-          </div>
-        </div>
+        {rates.title.map((rate, i) => {
+          return (
+            <div className=" mt-3 rounded border  ">
+              <div
+                className=" pt-2  col-md-12 text-white"
+                style={{ backgroundColor: "#0096D0" }}
+              >
+                <small className="card-text">{rate}</small>
+                <h5 className="">{rates.procent[i]} </h5>
+              </div>
+              <div className="col-md-12 bg-white  rate-footer" />
+            </div>
+          );
+        })}
       </React.Fragment>
     );
   }

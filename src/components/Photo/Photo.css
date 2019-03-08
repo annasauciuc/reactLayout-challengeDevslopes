@@ -1,0 +1,21 @@
+.photo {
+    background-color: #0096D0;
+}
+
+.photo-container {
+    border-radius: 0.25rem !important;
+}
+
+.card-f {
+    background-color: #484D4D!important;
+    color: rgb(255, 255, 255);
+}
+
+.card-f span {
+    color: #959797;
+}
+
+.main-card {
+    height: 200px;
+    border-radius: 8px
+}
